@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Roadha Run 2027 — Live Draw</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {theme: {extend: {fontFamily: {sans: ['Inter', 'sans-serif']}}}};
+  </script>
+  <style>
+    :root {
+      color-scheme: light
+    }
+
+    body {
+      background: #fafaf9
+    }
+
+    /* Letter cards: 3D flip on reveal */
+    .card {
+      perspective: 900px
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform .6s cubic-bezier(.2, .7, .2, 1)
+    }
+
+    .card.is-flipped .card-inner {
+      transform: rotateY(180deg)
+    }
+
+    .face {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden
+    }
+
+    .face.back {
+      transform: rotateY(180deg)
+    }
+
+    @keyframes chip-in {
+      from {
+        opacity: 0;
+        transform: translateY(-6px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .chip-in {
+      animation: chip-in .45s .35s both ease-out
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .card-inner,
+      .chip-in {
+        transition: none;
+        animation: none
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans text-stone-900 antialiased">
+  <div class="min-h-screen">
+    <header class="border-b border-stone-200 bg-white/80 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <span class="grid place-items-center w-8 h-8 rounded-lg bg-orange-600 text-white" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+              class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+            </svg>
+          </span>
+          <div class="leading-tight">
+            <p class="font-semibold tracking-tight">Roadha Run 2027</p>
+            <p class="text-xs text-stone-500">Live team draw</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+        <a href="players.html"
+          class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-stone-600 transition hover:bg-stone-100 hover:text-stone-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.75" class="w-4 h-4" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+          </svg>
+          Players
+        </a>
+        <a href="rules.html"
+          class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-stone-600 transition hover:bg-stone-100 hover:text-stone-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.75" class="w-4 h-4" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+          </svg>
+          Rules
+        </a>
+        <button id="restart"
+          class="inline-flex items-center gap-2 rounded-lg border border-stone-200 bg-white px-3.5 py-2 text-sm font-medium text-stone-700 shadow-sm transition hover:bg-stone-50 hover:border-stone-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            class="w-4 h-4" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+          </svg>
+          New draw
+        </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div class="grid gap-8 lg:grid-cols-2 lg:gap-12">
+
+        <!-- Draw stage -->
+        <section aria-labelledby="turn">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+            <span id="round" class="font-medium text-orange-700"></span>
+            <span class="text-stone-300" aria-hidden="true">/</span>
+            <span id="progress" class="text-stone-500 tabular-nums"></span>
+          </div>
+          <div class="mt-3 h-1 w-full rounded-full bg-stone-200 overflow-hidden" aria-hidden="true">
+            <div id="bar" class="h-full rounded-full bg-orange-600 transition-all duration-500" style="width:0"></div>
+          </div>
+
+          <p id="eyebrow" class="mt-10 text-xs font-semibold uppercase tracking-[0.14em] text-stone-400"></p>
+          <h1 id="turn" class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight"></h1>
+          <p id="instructions" class="mt-3 text-stone-500">Choose a letter. Each letter hides one eligible player.</p>
+
+          <ol id="order" class="mt-6 flex flex-wrap gap-2" aria-label="Picking order this round"></ol>
+
+          <div id="letters" class="mt-10 grid grid-cols-3 sm:grid-cols-4 gap-3 sm:gap-4 max-w-xl"></div>
+
+          <div id="done" class="hidden mt-10 max-w-xl rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div class="flex items-start gap-4">
+              <span class="grid place-items-center w-10 h-10 shrink-0 rounded-full bg-orange-50 text-orange-700"
+                aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.75" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold">20 players, 4 teams, every restriction respected.</p>
+                <p class="mt-1 text-sm text-stone-500">Final teams are shown alongside. Start a new draw to run it
+                  again.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="reveal" class="sr-only" aria-live="polite"></div>
+          <p id="error" role="alert" class="mt-6 text-sm font-medium text-red-700 empty:hidden"></p>
+
+          <button id="continue"
+            class="hidden mt-8 inline-flex items-center gap-2 rounded-xl bg-stone-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2">
+            <span id="continue-label">Next turn</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.75" class="w-4 h-4" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </button>
+        </section>
+
+        <!-- Teams -->
+        <aside aria-labelledby="teams-heading">
+          <h2 id="teams-heading" class="text-xs font-semibold uppercase tracking-[0.14em] text-stone-400">Teams</h2>
+          <div id="teams" class="mt-4 grid gap-3 sm:grid-cols-2"></div>
+        </aside>
+      </div>
+
+      <details class="group mt-16 border-t border-stone-200 pt-6 max-w-3xl">
+        <summary
+          class="flex cursor-pointer list-none items-center gap-2 text-sm font-medium text-stone-600 transition hover:text-stone-900 focus:outline-none focus-visible:text-orange-700">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.75" class="w-4 h-4 transition group-open:rotate-90" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+          Draw rules
+        </summary>
+        <p class="mt-3 text-sm leading-relaxed text-stone-500">Each team receives 2 players from Pot 1, 1 from
+          Pot 2, and 2 from Pot 3, over five rounds. Each round has a newly randomized picking order; every
+          seeded player starts one of the first four rounds, and the final round's first picker is drawn at random
+          (never the same as the round before). Restricted players and picks that would block completion are excluded before letters
+          are displayed.</p>
+      </details>
+    </main>
+  </div>
+
+  <script>
+    'use strict';
+    const seeds = ['Beybe', 'Kokki', 'Khadhy', 'Abbu'];
+    const pots = [['Rambo', 'Dhombe', 'Akko', 'Raamy', 'KD', 'Amna', 'Rauf', 'Irfan'], ['Zauu', 'Rathu', 'Mayya', 'Firsan'], ['Mamma', 'Kudaatha', 'Bappa', 'Shaff', 'Saru', 'Shatha', 'Siru', 'Leewaan']];
+    const forbidden = [['Beybe', 'Zauu'], ['Rathu', 'Irfan'], ['Firsan', 'KD'], ['Mayya', 'Rauf'], ['Abbu', 'Akko'], ['Dhombe', 'Amna'], ['Shatha', 'Raamy'], ['Kokki', 'Raamy'], ['Shaff', 'Kokki'], ['Rambo', 'Raamy'], ['Rambo', 'Kokki']];
+    const rounds = [0, 0, 1, 2, 2]; // pot index drawn from in each round
+    const TOTAL = rounds.length * seeds.length;
+    const $ = id => document.getElementById(id);
+    // Photos live in images/runners/<Name>.jpg (same as the players page); list any other extensions here.
+    const photoExt = {Abbu: 'png'};
+    const avatar = (name, size) => `<img src="images/runners/${name}.${photoExt[name] || 'jpg'}" alt="" class="${size} shrink-0 rounded-full object-cover bg-stone-200 ring-2 ring-white" onerror="this.remove()">`;
+    const shuffle = arr => {arr = [...arr]; for (let i = arr.length - 1; i > 0; i--) {let j = Math.floor(Math.random() * (i + 1));[arr[i], arr[j]] = [arr[j], arr[i]]} return arr};
+    let teams, remaining, orders, turnIndex, shown, waiting, complete;
+    let freshPick = false; // true only right after a click, so the flip animates once (not on restore)
+    function allowed(seed, player, roster) {return !forbidden.some(([a, b]) => (a === player && [seed, ...roster].includes(b)) || (b === player && [seed, ...roster].includes(a)))}
+    function futurePossible(teamState, remainState, fromIndex) {
+      if (fromIndex === TOTAL) return true;
+      // Cache equivalent subproblems to keep the live draw responsive.
+      const cache = new Set();
+      function solve(i) {
+        if (i === TOTAL) return true;
+        const key = i + '|' + seeds.map(s => teamState[s].join(',')).join('|');
+        if (cache.has(key)) return false;
+        const round = Math.floor(i / 4), pot = rounds[round], seed = orders[round][i % 4];
+        const options = remainState[pot].filter(p => allowed(seed, p, teamState[seed]));
+        for (const p of options) {
+          teamState[seed].push(p); remainState[pot].splice(remainState[pot].indexOf(p), 1);
+          if (solve(i + 1)) {teamState[seed].pop(); remainState[pot].push(p); return true}
+          teamState[seed].pop(); remainState[pot].push(p);
+        }
+        cache.add(key); return false;
+      }
+      return solve(fromIndex);
+    }
+    function validChoices() {
+      const r = Math.floor(turnIndex / 4), pot = rounds[r], seed = orders[r][turnIndex % 4]; return remaining[pot].filter(p => {
+        if (!allowed(seed, p, teams[seed])) return false;
+        const ts = Object.fromEntries(seeds.map(s => [s, [...teams[s]]])); const rs = remaining.map(a => [...a]);
+        ts[seed].push(p); rs[pot].splice(rs[pot].indexOf(p), 1);
+        return futurePossible(ts, rs, turnIndex + 1);
+      })
+    }
+    function makeOrders() {
+      // Each seed starts one of the first four rounds; the extra round's starter is random but never repeats the previous round's.
+      // Every round's order is independently shuffled behind its starter.
+      const starters = shuffle(seeds);
+      while (starters.length < rounds.length) starters.push(shuffle(seeds.filter(s => s !== starters.at(-1)))[0]);
+      return starters.map(first => [first, ...shuffle(seeds.filter(s => s !== first))]);
+    }
+    const STORE_KEY = 'roadha-run-2027-draw-v3'; // v3: three pots (8/4/8), five rounds
+    function save() {try {localStorage.setItem(STORE_KEY, JSON.stringify({teams, remaining, orders, turnIndex, shown, waiting, complete}))} catch (e) {} }
+    function restore() {
+      // Resume an in-progress draw after a refresh; anything malformed falls back to a fresh draw.
+      try {
+        const s = JSON.parse(localStorage.getItem(STORE_KEY));
+        if (!s || !Array.isArray(s.orders) || s.orders.length !== rounds.length || !Array.isArray(s.remaining) || s.remaining.length !== pots.length) return false;
+        if (!seeds.every(k => Array.isArray(s.teams?.[k])) || !Number.isInteger(s.turnIndex) || s.turnIndex < 0 || s.turnIndex > TOTAL) return false;
+        if (s.waiting && !s.shown?.player) return false;
+        ({teams, remaining, orders, turnIndex, shown, waiting, complete} = s); return true;
+      } catch (e) {return false}
+    }
+    function newDraw() {
+      // Generate a feasible order first so a failure leaves the current draw untouched; all valid choices are subsequently checked by the solver.
+      const prevOrders = orders; let found = false;
+      for (let tries = 0; tries < 300; tries++) {orders = makeOrders(); if (futurePossible(Object.fromEntries(seeds.map(s => [s, []])), pots.map(p => [...p]), 0)) {found = true; break} }
+      if (!found) {orders = prevOrders; $('error').textContent = 'Could not generate a valid order. Please try New Draw again.'; return }
+      teams = Object.fromEntries(seeds.map(s => [s, []])); remaining = pots.map(p => [...p]); turnIndex = 0; shown = {}; waiting = false; complete = false;
+      render();
+    }
+
+    function letterCard(letter, {back = '', flipped = false, dim = false, onClick = null}) {
+      const btn = document.createElement('button');
+      btn.className = 'card aspect-[4/5] rounded-2xl text-left transition focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2'
+        + (onClick ? ' hover:-translate-y-1 hover:shadow-lg shadow-sm' : ' cursor-default')
+        + (dim ? ' opacity-30' : '') + (flipped ? ' is-flipped shadow-lg' : '');
+      btn.setAttribute('aria-label', onClick ? `Pick letter ${letter}` : back ? `${letter}: ${back}` : `Letter ${letter}`);
+      if (!onClick) btn.disabled = true;
+      btn.innerHTML = `<div class="card-inner">
+        <div class="face front border border-stone-200 bg-white"><span class="text-4xl sm:text-5xl font-semibold tracking-tight text-stone-900">${letter}</span></div>
+        <div class="face back flex-col gap-1 bg-orange-600 px-2 text-center text-white"><span class="text-xs font-medium opacity-80">${letter}</span><span class="text-lg sm:text-xl font-semibold leading-tight break-words">${back}</span></div>
+      </div>`;
+      if (onClick) btn.onclick = onClick;
+      return btn;
+    }
+
+    function render() {
+      const r = Math.floor(turnIndex / 4), seed = complete ? null : orders[r][turnIndex % 4];
+      const made = turnIndex + (waiting ? 1 : 0), animate = freshPick; freshPick = false;
+      $('round').textContent = complete ? 'Draw complete' : `Round ${r + 1} of ${rounds.length} · Pot ${rounds[r] + 1}`;
+      $('progress').textContent = `${made} / ${TOTAL} picks`;
+      $('bar').style.width = `${made / TOTAL * 100}%`;
+      $('eyebrow').textContent = complete ? 'Finished' : waiting ? 'Revealed' : 'Now picking';
+      $('turn').textContent = complete ? 'All teams are set' : waiting ? `${shown.player} joins Team ${shown.seed}` : `${seed}'s turn`;
+      $('instructions').textContent = complete ? 'All players have been assigned.' : waiting ? 'Selection locked. Continue to the next player.' : 'Choose a letter. Each letter hides one eligible player.';
+
+      $('order').innerHTML = '';
+      if (!complete) orders[r].forEach((s, i) => {
+        const pos = turnIndex % 4, li = document.createElement('li');
+        const state = i < pos || (i === pos && waiting) ? 'done' : i === pos ? 'now' : 'next';
+        li.className = 'inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm transition ' +
+          (state === 'now' ? 'border-orange-600 bg-orange-50 font-semibold text-orange-800' : state === 'done' ? 'border-stone-200 bg-stone-100 text-stone-400' : 'border-stone-200 bg-white text-stone-600');
+        li.innerHTML = state === 'done'
+          ? `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" class="w-3.5 h-3.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg><span class="line-through decoration-stone-300">${s}</span>`
+          : `<span class="tabular-nums text-xs ${state === 'now' ? 'text-orange-700' : 'text-stone-400'}">${i + 1}</span>${s}`;
+        if (state === 'now') li.setAttribute('aria-current', 'step');
+        $('order').append(li);
+      });
+
+      $('letters').innerHTML = ''; $('reveal').textContent = '';
+      $('done').classList.toggle('hidden', !complete);
+      $('continue').classList.toggle('hidden', !waiting || complete);
+      $('continue-label').textContent = turnIndex === TOTAL - 1 ? 'Finish draw' : 'Next turn';
+      if (!complete) {
+        if (waiting) {
+          // Rebuild the letter row with the chosen card turned over; other letters stay hidden.
+          const count = shown.count || 1, idx = shown.count ? shown.letter.charCodeAt(0) - 65 : 0;
+          for (let i = 0; i < count; i++) {
+            const letter = String.fromCharCode(65 + i), mine = i === idx;
+            const card = letterCard(letter, {back: mine ? shown.player : '', flipped: mine && !animate, dim: !mine});
+            $('letters').append(card);
+            if (mine && animate) requestAnimationFrame(() => requestAnimationFrame(() => card.classList.add('is-flipped', 'shadow-lg')));
+          }
+          $('reveal').textContent = `${shown.letter} → ${shown.player} joins Team ${shown.seed}`;
+          if (animate) $('continue').focus({preventScroll: true});
+        } else {
+          const choices = shuffle(validChoices());
+          if (!choices.length) {$('error').textContent = 'No valid choices available. Please restart the draw.'}
+          else {$('error').textContent = ''; choices.forEach((p, i) => {const letter = String.fromCharCode(65 + i); $('letters').append(letterCard(letter, {onClick: () => pick(p, letter, choices.length)}))})}
+        }
+      }
+
+      const activeSeed = waiting ? shown.seed : seed;
+      $('teams').innerHTML = ''; seeds.forEach(s => {
+        const el = document.createElement('article'), vals = teams[s], active = s === activeSeed;
+        const byPot = pots.map(p => vals.filter(v => p.includes(v)));
+        // One slot per round, filled in pot order (e.g. Pot 4's two picks fill its two slots).
+        const slots = rounds.map((pot, i) => [byPot[pot][rounds.slice(0, i).filter(p => p === pot).length], `Pot ${pot + 1}`]);
+        el.className = 'rounded-2xl border bg-white p-4 transition ' + (active ? 'border-orange-600 shadow-md ring-4 ring-orange-100' : 'border-stone-200 shadow-sm');
+        el.innerHTML = `<div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5 min-w-0">${avatar(s, 'w-9 h-9')}<h3 class="font-semibold tracking-tight truncate">Team ${s}</h3></div>
+            <span class="text-xs tabular-nums ${vals.length === rounds.length ? 'text-orange-700 font-medium' : 'text-stone-400'}">${vals.length}/${rounds.length}</span>
+          </div>
+          <ul class="mt-3 grid gap-1.5">${slots.map(([name, label]) => {
+            // Compact one-line rows (pot label left, player right) so two team cards fit side by side.
+            const isNew = waiting && s === shown.seed && name === shown.player;
+            const tag = `<span class="shrink-0 text-[10px] font-medium uppercase tracking-wider text-stone-400">${label}</span>`;
+            return name
+              ? `<li class="flex items-center justify-between gap-3 rounded-lg min-h-9 px-2.5 py-1.5 ${isNew ? 'bg-orange-50 ring-1 ring-orange-200' : 'bg-stone-100'} ${isNew && animate ? 'chip-in' : ''}">${tag}<span class="flex items-center gap-2 min-w-0"><span class="text-sm font-medium truncate">${name}</span>${avatar(name, 'w-6 h-6')}</span></li>`
+              : `<li class="flex items-center justify-between gap-3 rounded-lg border border-dashed border-stone-200 min-h-9 px-2.5 py-1.5">${tag}<span class="text-sm text-stone-400">Open</span></li>`;
+          }).join('')}</ul>`;
+        $('teams').append(el);
+      });
+      save();
+    }
+    function pick(player, letter, count) {if (waiting || complete) return; const r = Math.floor(turnIndex / 4), pot = rounds[r], seed = orders[r][turnIndex % 4]; if (!validChoices().includes(player)) return; teams[seed].push(player); remaining[pot].splice(remaining[pot].indexOf(player), 1); waiting = true; shown = {seed, player, letter, count}; freshPick = true; render()}
+    $('continue').onclick = () => {if (!waiting) return; turnIndex++; waiting = false; complete = turnIndex === TOTAL; render()};
+    $('restart').onclick = () => {if (turnIndex === 0 && !waiting || confirm('Restart the entire draw? All current team assignments will be cleared.')) newDraw()};
+    if (restore()) render(); else newDraw();
+  </script>
+</body>
+
+</html>
